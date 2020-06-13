@@ -1,0 +1,10 @@
+<div class="row">
+    <div *ngIf="auth.userProfile$ | async as profile" class="card w-25 mx-auto">
+        <img src="{{ profile.picture }}" class="card-img-top">
+        <div class="card-body">
+            <p>Nombre: {{profile.given_name}}</p>
+            <p>Apellido: {{profile.family_name}}</p>
+            <p>Email: {{profile.email}}</p>
+        </div>
+    </div>
+</div>
